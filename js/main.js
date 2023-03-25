@@ -62,26 +62,34 @@
     // Chart Global Color
     Chart.defaults.color = "#6C7293";
     Chart.defaults.borderColor = "#000000";
+
     var res
     function calcular(investimento,patrimonio){
         return res = patrimonio - investimento
 
+    }    
+    var res2
+    function calcular2(rend,patr){
+        return res2 = rend / patr
+
     }
-    console.log(calcular(10,50))
 
     var invest = document.getElementById('investimento').innerHTML;
-    console.log(invest)
-
     var patr = document.getElementById('patrimonio').innerHTML;
-    console.log(patr)
 
-    
-
+    //convert string to float
     const inv = parseFloat(invest)
     const p = parseFloat(patr)
-    const dif = calcular(inv, p)
-    console.log(calcular(inv, p))
 
+    //faz operacao entre investimento e patrimonio
+
+    const dif = calcular(inv, p)
+    console.log("Rendimento: "+dif)
+
+    const p2 = calcular2(dif, p )
+    console.log(p2 + "%")
+
+    //inseri valor na div
     document.getElementById('rendimento').innerHTML = dif
 
    
