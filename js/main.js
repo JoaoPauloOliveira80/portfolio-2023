@@ -1,3 +1,10 @@
+
+$(".alert").show();
+setTimeout(function () {
+  $(".alert").hide();
+  $(".alert").alert('close')
+}, 3000);
+
 (function ($) {
     "use strict";
 
