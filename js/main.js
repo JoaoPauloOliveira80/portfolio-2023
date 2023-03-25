@@ -3,7 +3,7 @@ $(".alert").show();
 setTimeout(function () {
   $(".alert").hide();
   $(".alert").alert('close')
-}, 3000);
+}, 5000);
 
 (function ($) {
     "use strict";
