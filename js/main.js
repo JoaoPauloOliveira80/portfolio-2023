@@ -95,7 +95,7 @@
             labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Ago", "Jun","Jul","Ago","Set","Out","Nov","Dez"],
             datasets: [{
                     label: "Proventos",
-                    data: [15, 30, 55, 65, 60, 80, 95],
+                    data: [11.18, 37.24, 58.56],
                     backgroundColor: "rgba(235, 22, 22, .7)"
                 }
             ]
