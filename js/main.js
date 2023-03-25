@@ -62,17 +62,40 @@
     // Chart Global Color
     Chart.defaults.color = "#6C7293";
     Chart.defaults.borderColor = "#000000";
+    var res
+    function calcular(investimento,patrimonio){
+        return res = patrimonio - investimento
 
+    }
+    console.log(calcular(10,50))
+
+    var invest = document.getElementById('investimento').innerHTML;
+    console.log(invest)
+
+    var patr = document.getElementById('patrimonio').innerHTML;
+    console.log(patr)
+
+    
+
+    const inv = parseFloat(invest)
+    const p = parseFloat(patr)
+    const dif = calcular(inv, p)
+    console.log(calcular(inv, p))
+
+    document.getElementById('rendimento').innerHTML = dif
+
+   
+     
 
     // Worldwide Sales Chart
     var ctx1 = $("#worldwide-sales").get(0).getContext("2d");
     var myChart1 = new Chart(ctx1, {
         type: "bar",
         data: {
-            labels: ["2016", "2017", "2018", "2019", "2020", "2021", "2022"],
+            labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Ago", "Jun","Jul","Ago","Set","Out","Nov","Dez"],
             datasets: [{
                     label: "Proventos",
-                    data: [11.18, 37.24, 58.56],
+                    data: [15, 30, 55, 65, 60, 80, 95],
                     backgroundColor: "rgba(235, 22, 22, .7)"
                 }
             ]
@@ -88,17 +111,23 @@
     var myChart2 = new Chart(ctx2, {
         type: "bar",
         data: {
-            labels: ["2016", "2017", "2018", "2019", "2020", "2021", "2022"],
+            labels: ["2023"],
             datasets: [{
                     label: "Investimento",
-                    data: [4.000],
-                    backgroundColor: "rgba(235, 22, 22, .7)",
+                    data: [inv],
+                    backgroundColor: "rgba(255, 22, 22, .8)",
                     fill: true
                 },
                 {
                     label: "Patrimonio",
-                    data: [5.000],
+                    data: [p],
                     backgroundColor: "rgba(235, 22, 22, .5)",
+                    fill: true
+                },
+                {
+                    label: "Rentabilidade",
+                    data: [dif],
+                    backgroundColor: "rgba( 255, 140, 0, 1 )",
                     fill: true
                 }
             ]
